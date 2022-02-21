@@ -31,6 +31,94 @@ public class LongestValidParentheses {
      * Loop until the stack is empty
      *  find the difference in index value and find the max.
      *
+     * s = ")()())()()("
+     *
+     * stack = []
+     *
+     * i =0
+     * 	s[0] = ')'
+     * 	// stack is empty
+     * 		stack
+     * 			[0]
+     *
+     * i = 1
+     * 	s[1] = '('
+     * 	stack
+     * 		[1]
+     * 		[0]
+     *
+     * i = 2
+     * 	s[2] = ')'
+     * 	// stack not empty
+     * 		s[1] = '(' // s[stack's top]
+     * 		// Pop Stack
+     * 		stack
+     * 			[0]
+     *
+     * i = 3
+     * 	s[3] = '('
+     * 	stack
+     * 		[3]
+     * 		[0]
+     *
+     * i = 4
+     * 	s[4] = ')'
+     * 	// stack not empty
+     * 		s[3] = '(' // s[stack's top]
+     * 		// Pop Stack
+     * 		stack
+     * 			[0]
+     *
+     * i = 5
+     * 	s[5] = ')'
+     * 	// stack not empty
+     * 		s[0] != '(' // s[stack's top]
+     * 		//push i to stack
+     * 		stack
+     * 			[5]
+     * 			[0]
+     * i = 6
+     * 	s[6] = '('
+     * 	stack
+     * 		[6]
+     * 		[5]
+     * 		[0]
+     *
+     * i = 7
+     * 	s[7] = ')'
+     * 	// stack not empty
+     * 		s[6] = '(' // s[stack's top]
+     * 		// Pop Stack
+     * 		stack
+     * 			[5]
+     * 			[0]
+     *
+     * i =8
+     * 	s[8] = '('
+     * 	stack
+     * 		[8]
+     * 		[5]
+     * 		[0]
+     *
+     * i = 9
+     * 	s[9] = ')'
+     * 	// stack not empty
+     * 		s[8] = '(' // s[stack's top]
+     * 		// Pop Stack
+     * 		stack
+     * 			[5]
+     * 			[0]
+     *
+     * i = 10
+     * 	s[10]='('
+     * 	stack
+     * 		[10]
+     * 		[5]
+     * 		[0]
+     *
+     * Now the stack contains index where there is wrong bracket.
+     * Max is 4
+     *
      * @param s
      * @return
      */
